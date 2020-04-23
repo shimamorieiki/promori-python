@@ -1,0 +1,36 @@
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\0nHD0bvuyI6uaFrf.jpg
+['bottle', 'diningtable', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\0T-G2hIS4HgvncRc.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\1qvy3YyQSAV8nrEj.jpg
+['cat', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\1zeoeGGli8I1ld7R.jpg
+['dog'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\2K4OeTjQ08vYmLXm.jpg
+['tie', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\2YiXKbF5J0SPQ4G0.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\3eOwhHYtLqzGIQvm.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\3sZQjM2Y0v0TTcNe.jpg
+['chair', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\4FAAFqG3nFWLwr5A.jpg
+['umbrella'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\4FFtmIiV062NyFoL.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\4L5PeJhlGzVkn4Bo.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\4P7R-Ex_CJ-U83MY.jpg
+['pottedplant', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\4V6RjWNMYfyuMAfs.jpg
+['cat', 'tie', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\5cunDdSnr4I6DVQF.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\5trYN8xWSpmr5SPm.jpg
+['cat'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\6avw5vSDRvaJXUdd.jpg
+['tie', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\6FpaYs_35zPcSQUR.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\_pi7UK7F5ozK5-C5.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\0nHD0bvuyI6uaFrf.jpg
+['bottle', 'person', 'diningtable'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\0T-G2hIS4HgvncRc.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\1qvy3YyQSAV8nrEj.jpg
+['cat', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\1zeoeGGli8I1ld7R.jpg
+['dog'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\2K4OeTjQ08vYmLXm.jpg
+['tie', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\2YiXKbF5J0SPQ4G0.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\3eOwhHYtLqzGIQvm.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\3sZQjM2Y0v0TTcNe.jpg
+['person', 'chair'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\4FAAFqG3nFWLwr5A.jpg
+['umbrella'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\4FFtmIiV062NyFoL.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\4L5PeJhlGzVkn4Bo.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\4P7R-Ex_CJ-U83MY.jpg
+['person', 'pottedplant'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\4V6RjWNMYfyuMAfs.jpg
+['cat', 'tie', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\5cunDdSnr4I6DVQF.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\5trYN8xWSpmr5SPm.jpg
+['cat'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\6avw5vSDRvaJXUdd.jpg
+['tie', 'person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\6FpaYs_35zPcSQUR.jpg
+['person'],C:\Users\aifor\OneDrive\programing\Python\C_FLOW\pytorch-yolo-v3\imgs\_pi7UK7F5ozK5-C5.jpg
