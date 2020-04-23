@@ -5,6 +5,7 @@ import pprint
 import time
 import urllib.error
 import urllib.request
+import MeCab
 
 # 自分がフォローしている人がいいねまたはリツイートした画像のうち自分がいいと思ったやつを取得
 # 自分がフォローしている人を見つける
@@ -24,81 +25,6 @@ def getApiInstance():
 
     return api
 
-
-def Myfollowing(keyword,api):
-    #検索キーワード設定
-    q = keyword
-
-    #つぶやきを格納するリスト
-    tweets_data =[]
-
-    followers_list = getFollowers_ids(api,"KparadiseT")#フォロワーの情報を取得
-    for follower in followers_list:
-        # friends_count : フォロー数
-        # followers_count : フォロワー数
-        # description : 概要（自己紹介が書かれているやつ）
-        # print(follower.screen_name)
-        # print(follower)
-        get_image_tweet(follower,api)
-
-
-def Myfriends(keyword,api):
-
-    friends_list = getFriends_ids(api,"KparadiseT")#フォロワーの情報を取得
-    for friend in friends_list:
-        get_image_tweet(friend,api)
-
-
-def get_image_tweet(user_id,api):
-
-    list = api.user_timeline(user_id)
-    for item in list:
-        print(item.user.name)
-
-        if 'media' in item.entities:
-            url = item.entities['media'][0]['media_url_https']
-            dst_path = url.split('/')[-1]
-            download_file(url, './file/'+dst_path)
-
-
-def getFollowers_ids(Api, Id):
-
-    #Cursorを使ってフォロワーのidを逐次的に取得
-    followers_ids = tweepy.Cursor(Api.followers_ids, id = Id, cursor = -1).items()
-
-    followers_ids_list = []
-    try:
-        for followers_id in followers_ids:
-            followers_ids_list.append(followers_id)
-    except tweepy.error.TweepError as e:
-        print(e.reason)
-
-    return followers_ids_list
-
-
-def getFriends_ids(Api, Id):
-
-    #Cursorを使ってフォロワーのidを逐次的に取得
-    friends_ids = tweepy.Cursor(Api.friends_ids, id = Id, cursor = -1).items()
-
-    friends_ids_list = []
-    try:
-        for friends_id in friends_ids:
-            friends_ids_list.append(friends_id)
-    except tweepy.error.TweepError as e:
-        print(e.reason)
-
-    return friends_ids_list
-
-
-def download_file(url, dst_path):
-    try:
-        with urllib.request.urlopen(url) as web_file:
-            data = web_file.read()
-            with open(dst_path, mode='wb') as local_file:
-                local_file.write(data)
-    except urllib.error.URLError as e:
-        print(e)
 
 def gettwitterdata(keyword):
 
@@ -191,19 +117,64 @@ def gettwitterdata(keyword):
     # print(tweets_data)
 
 
+
+
+
+
+def gettwitterdata(keyword,api):
+    #検索キーワード設定
+    q = keyword
+    i = 0
+
+    #つぶやきを格納するリスト
+    tweets_data =[]
+
+    #カーソルを使用してデータ取得
+    for tweet in tweepy.Cursor(api.search, q=q, count=100,tweet_mode='extended').items():
+        if tweet.created_at < datetime.datetime.now() + datetime.timedelta(hours=8):
+            i = i + 1
+            # print(tweet.user.name)
+            # print(tweet.user.screen_name)
+            # print(tweet.user.protected)
+            # print(tweet.user.followers_count)
+            # print(tweet.user.friends_count)
+            # print(tweet.created_at + datetime.timedelta(hours=9))
+            # print(tweet.created_at)
+            # print(tweet.user.favourites_count)
+            # print(tweet.full_text)
+            str = tweet.full_text
+            m = MeCab.Tagger("-Ochasen")
+            for line in str.split("\n"):
+                for kore in m.parse(line).split("\t\t"):
+                    for item in　kore:
+                        linelist = item.split()
+                        if len(linelist)>=3:
+                            if "-" in linelist[3]:
+                                pos = linelist[3].split("-")
+                                keitaiso["pos"] = pos[0]
+                                keitaiso["pos1"] = pos[1]
+                            else:
+                                keitaiso["pos"] = linelist[3]
+                                keitaiso["pos1"] = ""
+
+                            keitaiso["surface"] = linelist[0]
+                            keitaiso["base"] = linelist[2]
+
+
+            # with open("./text/text.txt", "a",encoding="utf-8") as f:
+            #     f.writelines(str)
+            if i > 2:
+                break
+
+
+        else:
+            print("これどうなの")
+            break
+
+
+
 if __name__ == '__main__':
 
     api = getApiInstance()
 
-    #検索キーワードを入力  ※リツイートを除外する場合 「キーワード -RT 」と入力
-    # print ('====== Enter Serch KeyWord   =====')
-    # keyword = input('>  ')
-
-
-    # #出力ファイル名を入力(相対パス or 絶対パス)
-    # print ('====== Enter Tweet Data file =====')
-    # dfile = input('>  ')
-
-    # gettwitterdata('金色ステッカー')
-    # Myfollowing(keyword = '金色ステッカー',api = api)
-    Myfriends(keyword = '金色ステッカー',api = api)
+    gettwitterdata('#どうぶつの森',api)
