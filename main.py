@@ -50,7 +50,7 @@ def gettwitterdata(keyword,api):
             # print(tweet.user.favourites_count)
             strtext = tweet.full_text.replace("#どうぶつの森","").replace("#AnimalCrossing","").replace("#ACNH","").replace("#NintendoSwitch","")
             strtext = re.sub('https?://[\w/:%#\$&\?\(\)~\.=\+\-]+',"",strtext)
-            m = MeCab.Tagger("-Ochasen")
+            m = MeCab.Tagger("-Ochasen -u /home/tk/Documents/prog/py-promori/dic/atsumori.dic")
             for line in strtext.split("\n"):
                 for kore in m.parse(line).split("\t\t"):
                     # print(kore)
