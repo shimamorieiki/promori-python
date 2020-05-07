@@ -34,6 +34,16 @@ def look_db_itr(table):
     conn.close()
 
 
+# def search_db_itr(table, id=True):
+
+#     conn = sqlite3.connect('./db/promoridb.sqlite3')
+#     c = conn.cursor()
+#     for row in c.execute("select * from " + table):
+#         print(row)
+#     conn.commit()
+#     conn.close()
+
+
 def latest_date(table):
     conn = sqlite3.connect('./db/promoridb.sqlite3')
     c = conn.cursor()
@@ -54,5 +64,5 @@ def latest_date(table):
 
 
 if __name__ == "__main__":
-    # look_db_itr("tweets")
-    print(latest_date("tweets"))
+    look_db_itr("tweets")
+    # print(latest_date("tweets"))
