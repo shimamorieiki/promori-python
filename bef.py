@@ -2,7 +2,7 @@
 recipes = []
 exists = []
 
-with open("./text/art.html", mode='r', encoding="utf-8") as f:
+with open("./text/chara.html", mode='r', encoding="utf-8") as f:
     lines = f.readlines()
     # coding: UTF-8
     for line in lines:
@@ -10,18 +10,18 @@ with open("./text/art.html", mode='r', encoding="utf-8") as f:
             recipes.append(line.replace("\n", ""))
 
 
-with open("./text/art.csv", mode='r', encoding="utf-8") as f:
+with open("./text/csv/chara.csv", mode='r', encoding="utf-8") as f:
     lines = f.readlines()
     # coding: UTF-8
     for line in lines:
         item = line.split(",")
         exists.append(item[0])
 
-with open("./text/art.csv", mode='a', encoding="utf-8") as f:
+with open("./text/csv/chara.csv", mode='a', encoding="utf-8") as f:
     for recipe in recipes:
         if recipe in exists:
             pass
         else:
             # 表層形,左文脈ID,右文脈ID,コスト,品詞,品詞細分類1,品詞細分類2,品詞細分類3,活用形,活用型,原形,読み,発音
             f.write(recipe+",,,"+"1,名詞,固有名詞,一般,*,*,*," +
-                    recipe+",yomi,hatuonn,(美術品)\n")
+                    recipe+",yomi,hatuonn,(キャラクター)\n")

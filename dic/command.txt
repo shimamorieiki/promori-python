@@ -1,1 +1,1 @@
-sudo /usr/lib/mecab/mecab-dict-index -d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd -u /home/tk/Documents/prog/py-promori/atsumori20200507.dic -f utf8 -t utf8 /home/tk/Documents/prog/py-promori/text/dic_list_in_all.csv
+sudo /usr/lib/mecab/mecab-dict-index -d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd -u /home/tk/Documents/prog/py-promori/dic/atsumori20200507.dic -f utf8 -t utf8 /home/tk/Documents/prog/py-promori/text/csv/dic_list_in_all.csv
