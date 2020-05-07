@@ -55,7 +55,7 @@ def gettwitterdata(keyword, api):
             strtext = re.sub(
                 'https?://[\w/:%#\$&\?\(\)~\.=\+\-]+', "", strtext)
             m = MeCab.Tagger(
-                "-Ochasen -u /home/tk/Documents/prog/py-promori/dic/atsumori.dic")
+                "-Ochasen -u /home/tk/Documents/prog/py-promori/dic/atsumori20200507.dic")
             for line in strtext.split("\n"):
                 for kore in m.parse(line).split("\t\t"):
                     # print(kore)
